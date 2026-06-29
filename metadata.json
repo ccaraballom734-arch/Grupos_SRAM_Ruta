@@ -1,0 +1,6 @@
+{
+  "name": "SRAM AXS Road Portfolio",
+  "description": "Portafolio interactivo de los grupos de transmisión de ruta SRAM AXS (RED, Force y Rival) con comparador de pesos, guía de compatibilidad, y emparejamiento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
