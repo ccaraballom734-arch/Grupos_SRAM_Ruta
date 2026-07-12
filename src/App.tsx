@@ -29,6 +29,7 @@ import ModelCodeTool from './components/ModelCodeTool';
 import PairingSimulator from './components/PairingSimulator';
 import WeightComparison from './components/WeightComparison';
 import GroupModal from './components/GroupModal';
+import SramSupportChatbot from './components/SramSupportChatbot';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('presentacion');
@@ -797,6 +798,9 @@ export default function App() {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
+      {/* Embedded SRAM Support Chatbot */}
+      <SramSupportChatbot />
 
     </div>
   );

@@ -83,22 +83,22 @@ export default function WeightComparison() {
   };
 
   return (
-    <div id="weight-comparison" class="backdrop-blur-xl bg-white/45 border border-white/60 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-all">
-      <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+    <div id="weight-comparison" className="backdrop-blur-xl bg-white/45 border border-white/60 p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-all">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
         <div>
-          <h3 class="font-display font-bold text-xl uppercase tracking-wide text-gray-800">
+          <h3 className="font-display font-bold text-xl uppercase tracking-wide text-gray-800">
             Comparativa Dinámica de Pesos
           </h3>
-          <p class="text-[10px] text-gray-400 font-bold tracking-widest uppercase mt-0.5">Sección 9 • Configuración Personalizada</p>
+          <p className="text-[10px] text-gray-400 font-bold tracking-widest uppercase mt-0.5">Sección 9 • Configuración Personalizada</p>
         </div>
         
         {/* Quick presets selectors */}
-        <div class="flex gap-2 bg-gray-100 p-1 rounded-xl self-start">
+        <div className="flex gap-2 bg-gray-100 p-1 rounded-xl self-start">
           {(['red', 'force', 'rival'] as const).map((g) => (
             <button
               key={g}
               onClick={() => setSelectedGroup(g)}
-              class={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 selectedGroup === g
                   ? g === 'red'
                     ? 'bg-[#E11D22] text-white'
@@ -114,82 +114,82 @@ export default function WeightComparison() {
         </div>
       </div>
 
-      <p class="text-xs text-gray-600 mb-6 leading-relaxed">
+      <p className="text-xs text-gray-600 mb-6 leading-relaxed">
         El peso es vital. Descubra cómo influyen las tecnologías en cada componente. 
         Compare los tres grupos estándar o cree su propia <strong>bici personalizada híbrida (Mix & Match)</strong> abajo para recalcular el peso del conjunto:
       </p>
 
       {/* Main Bar Chart Comparison */}
-      <div class="space-y-4 mb-8 bg-white/70 p-5 rounded-2xl border border-gray-100 shadow-sm">
-        <h4 class="text-[10px] uppercase font-black tracking-wider text-gray-400 mb-2">
+      <div className="space-y-4 mb-8 bg-white/70 p-5 rounded-2xl border border-gray-100 shadow-sm">
+        <h4 className="text-[10px] uppercase font-black tracking-wider text-gray-400 mb-2">
           PESO TOTAL DEL GRUPO (GRAMOS)
         </h4>
 
         {/* RED Bar */}
-        <div class={`space-y-1 transition-all duration-300 ${selectedGroup === 'red' ? 'scale-[1.01]' : 'opacity-70'}`}>
-          <div class="flex justify-between items-baseline">
-            <span class="text-xs font-bold text-gray-800">SRAM RED AXS (Competición)</span>
-            <span class="font-mono text-xs font-black text-[#E11D22]">2.496g</span>
+        <div className={`space-y-1 transition-all duration-300 ${selectedGroup === 'red' ? 'scale-[1.01]' : 'opacity-70'}`}>
+          <div className="flex justify-between items-baseline">
+            <span className="text-xs font-bold text-gray-800">SRAM RED AXS (Competición)</span>
+            <span className="font-mono text-xs font-black text-[#E11D22]">2.496g</span>
           </div>
-          <div class="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-            <div class="h-full bg-[#E11D22] rounded-full transition-all duration-500" style={{ width: `${(2496 / 3109) * 100}%` }}></div>
+          <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+            <div className="h-full bg-[#E11D22] rounded-full transition-all duration-500" style={{ width: `${(2496 / 3109) * 100}%` }}></div>
           </div>
         </div>
 
         {/* FORCE Bar */}
-        <div class={`space-y-1 transition-all duration-300 ${selectedGroup === 'force' ? 'scale-[1.01]' : 'opacity-70'}`}>
-          <div class="flex justify-between items-baseline">
-            <span class="text-xs font-bold text-gray-800">SRAM FORCE AXS (Pro Performance)</span>
-            <span class="font-mono text-xs font-black text-gray-600">2.670g</span>
+        <div className={`space-y-1 transition-all duration-300 ${selectedGroup === 'force' ? 'scale-[1.01]' : 'opacity-70'}`}>
+          <div className="flex justify-between items-baseline">
+            <span className="text-xs font-bold text-gray-800">SRAM FORCE AXS (Pro Performance)</span>
+            <span className="font-mono text-xs font-black text-gray-600">2.670g</span>
           </div>
-          <div class="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-            <div class="h-full bg-gray-600 rounded-full transition-all duration-500" style={{ width: `${(2670 / 3109) * 100}%` }}></div>
+          <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+            <div className="h-full bg-gray-600 rounded-full transition-all duration-500" style={{ width: `${(2670 / 3109) * 100}%` }}></div>
           </div>
         </div>
 
         {/* RIVAL Bar */}
-        <div class={`space-y-1 transition-all duration-300 ${selectedGroup === 'rival' ? 'scale-[1.01]' : 'opacity-70'}`}>
-          <div class="flex justify-between items-baseline">
-            <span class="text-xs font-bold text-gray-800">SRAM RIVAL AXS (Acceso Premium)</span>
-            <span class="font-mono text-xs font-black text-gray-400">3.109g</span>
+        <div className={`space-y-1 transition-all duration-300 ${selectedGroup === 'rival' ? 'scale-[1.01]' : 'opacity-70'}`}>
+          <div className="flex justify-between items-baseline">
+            <span className="text-xs font-bold text-gray-800">SRAM RIVAL AXS (Acceso Premium)</span>
+            <span className="font-mono text-xs font-black text-gray-400">3.109g</span>
           </div>
-          <div class="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
-            <div class="h-full bg-gray-400 rounded-full transition-all duration-500" style={{ width: '100%' }}></div>
+          <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+            <div className="h-full bg-gray-400 rounded-full transition-all duration-500" style={{ width: '100%' }}></div>
           </div>
         </div>
 
         {/* Custom Mix & Match Bar */}
-        <div class="space-y-1 border-t border-gray-100 pt-4 mt-2">
-          <div class="flex justify-between items-baseline">
-            <span class="text-xs font-bold text-[#E11D22] uppercase tracking-wide flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping"></span>
+        <div className="space-y-1 border-t border-gray-100 pt-4 mt-2">
+          <div className="flex justify-between items-baseline">
+            <span className="text-xs font-bold text-[#E11D22] uppercase tracking-wide flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping"></span>
               Tu Configuración Híbrida
             </span>
-            <span class="font-mono text-xs font-black text-red-600">{customWeight}g</span>
+            <span className="font-mono text-xs font-black text-red-600">{customWeight}g</span>
           </div>
-          <div class="h-2.5 w-full bg-gray-100 rounded-full overflow-hidden">
-            <div class="h-full bg-gradient-to-r from-red-600 to-gray-700 rounded-full transition-all duration-300" style={{ width: `${(customWeight / 3109) * 100}%` }}></div>
+          <div className="h-2.5 w-full bg-gray-100 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-red-600 to-gray-700 rounded-full transition-all duration-300" style={{ width: `${(customWeight / 3109) * 100}%` }}></div>
           </div>
         </div>
       </div>
 
       {/* Mix & Match Configurator Board */}
-      <div class="bg-gray-50 border border-gray-100 rounded-2xl p-4">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="material-symbols-outlined text-brand-red text-sm">construction</span>
-          <h4 class="text-[11px] font-bold text-gray-800 uppercase tracking-widest">
+      <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4">
+        <div className="flex items-center gap-2 mb-4">
+          <span className="material-symbols-outlined text-brand-red text-sm">construction</span>
+          <h4 className="text-[11px] font-bold text-gray-800 uppercase tracking-widest">
             Tablero Mix & Match: Diseña tu Transmisión
           </h4>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
           {/* Manetas */}
           <div>
-            <label class="block text-[9px] uppercase font-bold text-gray-500 mb-1">Manetas y Pinzas</label>
+            <label className="block text-[9px] uppercase font-bold text-gray-500 mb-1">Manetas y Pinzas</label>
             <select
               value={mixMatch.manetas}
               onChange={(e) => setMixMatch(prev => ({ ...prev, manetas: e.target.value as any }))}
-              class="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
+              className="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
             >
               <option value="red">RED ({weights.red.manetas}g)</option>
               <option value="force">Force ({weights.force.manetas}g)</option>
@@ -199,11 +199,11 @@ export default function WeightComparison() {
 
           {/* Bielas */}
           <div>
-            <label class="block text-[9px] uppercase font-bold text-gray-500 mb-1">Bielas y Platos</label>
+            <label className="block text-[9px] uppercase font-bold text-gray-500 mb-1">Bielas y Platos</label>
             <select
               value={mixMatch.bielas}
               onChange={(e) => setMixMatch(prev => ({ ...prev, bielas: e.target.value as any }))}
-              class="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
+              className="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
             >
               <option value="red">RED ({weights.red.bielas}g)</option>
               <option value="force">Force ({weights.force.bielas}g)</option>
@@ -213,11 +213,11 @@ export default function WeightComparison() {
 
           {/* Cadena */}
           <div>
-            <label class="block text-[9px] uppercase font-bold text-gray-500 mb-1">Cadena Flattop</label>
+            <label className="block text-[9px] uppercase font-bold text-gray-500 mb-1">Cadena Flattop</label>
             <select
               value={mixMatch.cadena}
               onChange={(e) => setMixMatch(prev => ({ ...prev, cadena: e.target.value as any }))}
-              class="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
+              className="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
             >
               <option value="red">RED ({weights.red.cadena}g)</option>
               <option value="force">Force ({weights.force.cadena}g)</option>
@@ -227,11 +227,11 @@ export default function WeightComparison() {
 
           {/* Desviador Trasero */}
           <div>
-            <label class="block text-[9px] uppercase font-bold text-gray-500 mb-1">Cambio Trasero</label>
+            <label className="block text-[9px] uppercase font-bold text-gray-500 mb-1">Cambio Trasero</label>
             <select
               value={mixMatch.desviadorTrat}
               onChange={(e) => setMixMatch(prev => ({ ...prev, desviadorTrat: e.target.value as any }))}
-              class="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
+              className="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
             >
               <option value="red">RED ({weights.red.desviadorTrat}g)</option>
               <option value="force">Force ({weights.force.desviadorTrat}g)</option>
@@ -241,11 +241,11 @@ export default function WeightComparison() {
 
           {/* Desviador Delantero */}
           <div>
-            <label class="block text-[9px] uppercase font-bold text-gray-500 mb-1">Desviador Del.</label>
+            <label className="block text-[9px] uppercase font-bold text-gray-500 mb-1">Desviador Del.</label>
             <select
               value={mixMatch.desviadorDel}
               onChange={(e) => setMixMatch(prev => ({ ...prev, desviadorDel: e.target.value as any }))}
-              class="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
+              className="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
             >
               <option value="red">RED ({weights.red.desviadorDel}g)</option>
               <option value="force">Force ({weights.force.desviadorDel}g)</option>
@@ -255,11 +255,11 @@ export default function WeightComparison() {
 
           {/* Discos */}
           <div>
-            <label class="block text-[9px] uppercase font-bold text-gray-500 mb-1">Discos de Freno</label>
+            <label className="block text-[9px] uppercase font-bold text-gray-500 mb-1">Discos de Freno</label>
             <select
               value={mixMatch.discos}
               onChange={(e) => setMixMatch(prev => ({ ...prev, discos: e.target.value as any }))}
-              class="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
+              className="w-full bg-white border border-gray-200 rounded-xl p-1.5 text-[10px] font-semibold cursor-pointer"
             >
               <option value="red">RED ({weights.red.discos}g)</option>
               <option value="force">Force ({weights.force.discos}g)</option>
@@ -269,27 +269,27 @@ export default function WeightComparison() {
         </div>
 
         {/* Customized Stats Details */}
-        <div class="mt-4 pt-4 border-t border-gray-200/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+        <div className="mt-4 pt-4 border-t border-gray-200/50 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <div>
-            <p class="text-[10px] font-bold text-gray-600 uppercase">
+            <p className="text-[10px] font-bold text-gray-600 uppercase">
               Ahorro de Peso Estimado:
             </p>
-            <p class="text-xs text-gray-500">
+            <p className="text-xs text-gray-500">
               {customWeight < 3109 
                 ? `Estás ahorrando ${3109 - customWeight}g comparado con un grupo Rival completo.` 
                 : 'Tu peso está optimizado respecto a estándares básicos.'}
             </p>
           </div>
-          <div class="flex gap-2">
+          <div className="flex gap-2">
             <button 
               onClick={() => setMixMatch({ manetas: 'red', bielas: 'red', cadena: 'red', desviadorTrat: 'red', desviadorDel: 'red', discos: 'red' })}
-              class="px-2.5 py-1.5 border border-gray-200 bg-white hover:bg-gray-100 text-[9px] font-bold uppercase rounded-lg transition-colors cursor-pointer"
+              className="px-2.5 py-1.5 border border-gray-200 bg-white hover:bg-gray-100 text-[9px] font-bold uppercase rounded-lg transition-colors cursor-pointer"
             >
               Todo RED
             </button>
             <button 
               onClick={() => setMixMatch({ manetas: 'rival', bielas: 'rival', cadena: 'rival', desviadorTrat: 'rival', desviadorDel: 'rival', discos: 'rival' })}
-              class="px-2.5 py-1.5 border border-gray-200 bg-white hover:bg-gray-100 text-[9px] font-bold uppercase rounded-lg transition-colors cursor-pointer"
+              className="px-2.5 py-1.5 border border-gray-200 bg-white hover:bg-gray-100 text-[9px] font-bold uppercase rounded-lg transition-colors cursor-pointer"
             >
               Todo Rival
             </button>
